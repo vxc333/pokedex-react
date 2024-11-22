@@ -1,50 +1,68 @@
-# React + TypeScript + Vite
+# Pokédex React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma Pokédex moderna construída com React, TypeScript e TailwindCSS.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 Busca em tempo real de Pokémons
+- ⌨️ Navegação por teclado (Ctrl + / para focar na busca)
+- 🎨 Interface responsiva e acessível
+- ⚡ Carregamento otimizado de imagens
+- 🔄 Cache de dados com React Query
+- 📱 Design responsivo
+- ♿ Acessibilidade com ARIA labels
 
-## Expanding the ESLint configuration
+## Tecnologias
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React 18
+- TypeScript
+- TailwindCSS
+- Radix UI
+- React Query
+- Axios
 
-- Configure the top-level `parserOptions` property like this:
+## Como Executar
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Instalar dependências
+
+```bash
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Rodar em modo de desenvolvimento
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm run dev
 ```
+
+## Estrutura do Projeto
+
+```
+src/
+├── components/
+│   ├── pokemon/     # Componentes específicos de Pokémon
+│   └── ui/          # Componentes UI reutilizáveis
+├── hooks/           # Custom hooks
+├── services/        # Serviços de API
+├── types/           # Tipos TypeScript
+└── utils/           # Utilitários
+```
+
+## Decisões de Arquitetura
+
+- **Componentes**: Separados por domínio (pokemon) e UI genérica
+- **React Query**: Gerenciamento de estado e cache para requisições
+- **Radix UI**: Componentes base acessíveis
+- **TailwindCSS**: Estilização utilitária e responsiva
+
+## API
+
+O projeto utiliza a [PokéAPI](https://pokeapi.co/) para obter os dados dos Pokémons.
+
+## Contribuindo
+
+Contribuições são bem-vindas! Por favor, leia as diretrizes de contribuição antes de enviar um PR.
+
+## Licença
+
+MIT
