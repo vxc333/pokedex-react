@@ -43,7 +43,7 @@ npm run dev
 
 ## Estrutura do Projeto
 
-```
+```text
 src/
 ├── components/
 │   ├── pokemon/     # Componentes específicos de Pokémon
