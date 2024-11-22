@@ -23,6 +23,12 @@ Uma Pokédex moderna construída com React, TypeScript e TailwindCSS.
 
 ## Como Executar
 
+Clonar o repositório
+
+```bash
+git clone https://github.com/vxc333/pokedex-react.git
+```
+
 Instalar dependências
 
 ```bash
